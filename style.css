@@ -1,0 +1,745 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    padding:70px 10%;
+}
+
+h1,h2,h3{
+    margin-bottom:20px;
+}
+
+h2{
+    color:#003366;
+    font-size:38px;
+    text-align:center;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#ff9900;
+    margin:12px auto;
+    border-radius:20px;
+}
+
+p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+
+/* HEADER */
+
+header{
+    background:#003366;
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 4px 10px #0003;
+}
+
+.logo img{
+    width: 180px;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#ff9900;
+}
+
+
+/* BANNER */
+
+.banner,
+.banner-interno{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url("../img/banner.jpg") center/cover no-repeat;
+    color:white;
+}
+
+.banner{
+    height:90vh;
+}
+
+.banner-interno{
+    height:50vh;
+}
+
+.contenido-banner{
+    background:#0007;
+    padding:45px;
+    border-radius:15px;
+    max-width:760px;
+}
+
+.contenido-banner h1{
+    font-size:55px;
+}
+
+.contenido-banner p{
+    font-size:20px;
+    text-align:center;
+}
+
+.btn-banner{
+    display:inline-block;
+    background:#ff9900;
+    color:white;
+    padding:16px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-banner:hover{
+    background:#e67e00;
+    transform:translateY(-4px);
+}
+/*========== NOSOTROS ==========*/
+
+.nosotros,
+.contenedor-contacto{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.nosotros{
+    background:#fff;
+}
+
+.imagen-nosotros,
+.texto-nosotros,
+.info-contacto,
+.formulario{
+    flex:1;
+}
+
+.imagen-nosotros img,
+.galeria img,
+.video video{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 8px 20px #0002;
+    transition:.3s;
+}
+
+.imagen-nosotros img:hover,
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+.texto-nosotros h2,
+.servicios h2,
+.multimedia h2{
+    color:#003366;
+}
+
+.texto-nosotros p,
+.texto-nosotros li{
+    text-align:justify;
+    color:#444;
+    font-size:17px;
+}
+
+.texto-nosotros li{
+    margin-bottom:10px;
+}
+
+
+/*========== SERVICIOS ==========*/
+
+.servicios,
+.contacto{
+    background:#f5f7fa;
+    text-align:center;
+}
+
+.contenedor-servicios{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px #0002;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#003366;
+    margin:20px;
+}
+
+.card p{
+    padding:0 20px 25px;
+    color:#555;
+}
+
+
+/*========== MULTIMEDIA ==========*/
+
+.multimedia{
+    background:#fff;
+    text-align:center;
+}
+
+.descripcion{
+    width:80%;
+    margin:auto;
+    color:#555;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.galeria img{
+    height:230px;
+    object-fit:cover;
+}
+
+.video{
+    margin-top:50px;
+}
+
+.video h3{
+    color:#003366;
+}
+
+.video video{
+    max-width:800px;
+}
+
+
+/*========== CONTACTO ==========*/
+
+.contenedor-contacto{
+    align-items:flex-start;
+    margin-top:40px;
+}
+
+.info-contacto h3,
+.footer-contenido h3{
+    color:#ff8c00;
+}
+
+.info-contacto p,
+.footer-contacto p{
+    color:#555;
+}
+
+.formulario form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button{
+    padding:15px;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.formulario input,
+.formulario textarea{
+    border:1px solid #ccc;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+    outline:none;
+    border:2px solid #003366;
+}
+
+.formulario textarea{
+    height:150px;
+}
+
+.formulario button{
+    background:#003366;
+    color:white;
+    border:0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.formulario button:hover{
+    background:#0066cc;
+}
+
+
+/*========== FOOTER ==========*/
+
+footer{
+    background:#003366;
+    color:white;
+}
+
+.footer-contenido{
+    width:90%;
+    margin:auto;
+    padding:45px 0;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-contenido div{
+    flex:1;
+    min-width:250px;
+}
+
+.footer-empresa img{
+    width:180px;
+}
+
+.footer-enlaces a{
+    color:white;
+}
+
+.footer-enlaces a:hover{
+    color:#ff8c00;
+}
+
+.footer-copy{
+    background:#00264d;
+    padding:18px;
+    text-align:center;
+}
+
+.footer-copy p{
+    margin:0;
+    text-align:center;
+}
+/*========== HISTORIA ==========*/
+
+.historia,
+.mision-vision{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:70px 10%;
+}
+
+.historia{
+    background:#fff;
+}
+
+.mision-vision,
+.beneficios,
+.equipo{
+    background:#eef4fa;
+}
+
+.historia-imagen,
+.historia-texto,
+.mision,
+.vision{
+    flex:1;
+}
+
+.historia-imagen img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,51,102,.15);
+    transition:.4s;
+}
+
+.historia-imagen img:hover{
+    transform:scale(1.04);
+}
+
+.historia-texto p,
+.mision p,
+.vision p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+/*========== MISIÓN Y VISIÓN ==========*/
+
+.mision,
+.vision{
+    background:#fff;
+    padding:35px;
+    border-top:5px solid #ff9900;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,51,102,.12);
+    transition:.4s;
+}
+
+.mision:hover,
+.vision:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,51,102,.18);
+}
+
+/*========== VALORES ==========*/
+
+.valores,
+.servicios-detalle{
+    background:#fff;
+    text-align:center;
+}
+
+.contenedor-valores,
+.contenedor-servicios-detalle,
+.contenedor-equipo{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.valor,
+.servicio,
+.miembro{
+    width:300px;
+    background:#f8fbff;
+    border-top:5px solid #ff9900;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,51,102,.12);
+    transition:.4s;
+}
+
+.valor:hover,
+.servicio:hover,
+.miembro:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,51,102,.18);
+}
+
+.valor{
+    padding:30px;
+}
+
+.valor h3,
+.servicio h3,
+.miembro h3{
+    color:#003366;
+    margin:20px 15px 10px;
+}
+
+/*========== NUESTRO EQUIPO ==========*/
+
+.equipo{
+    text-align:center;
+}
+
+.descripcion-equipo{
+    width:80%;
+    margin:0 auto 50px;
+    color:#555;
+    line-height:1.8;
+}
+
+.miembro img,
+.servicio img{
+    width:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.miembro img{
+    height:250px;
+}
+
+.servicio img{
+    height:220px;
+}
+
+.miembro:hover img,
+.servicio:hover img{
+    transform:scale(1.05);
+}
+
+.miembro p,
+.servicio p,
+.valor p{
+    padding:0 20px 25px;
+    color:#555;
+}
+
+/*========== SERVICIOS DETALLE ==========*/
+
+.servicio{
+    width:320px;
+}
+
+/*========== BENEFICIOS ==========*/
+
+.beneficios{
+    text-align:center;
+}
+
+.beneficios ul{
+    width:min(700px,90%);
+    margin:auto;
+    text-align:left;
+}
+
+.beneficios li{
+    margin-bottom:18px;
+    padding-left:8px;
+    font-size:17px;
+    color:#444;
+}
+/*========== GALERÍA - VIDEO - AUDIO ==========*/
+
+.galeria-completa,
+.audio-institucional{
+    text-align:center;
+    background:#fff;
+}
+
+.video-institucional{
+    text-align:center;
+    background:#eef4fa;
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,51,102,.12);
+    transition:.4s;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 30px rgba(0,51,102,.2);
+}
+
+.video-institucional video{
+    width:80%;
+    max-width:850px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,51,102,.15);
+}
+
+.audio-institucional audio{
+    width:min(600px,90%);
+    margin-top:20px;
+}
+/*========== CONTACTO COMPLETO - MAPA ==========*/
+
+.contacto-completo{
+    background:#fff;
+}
+
+.mapa{
+    text-align:center;
+    background:#eef4fa;
+}
+
+.mapa iframe{
+    width:90%;
+    height:450px;
+    border:0;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,51,102,.15);
+    transition:.4s;
+}
+
+.mapa iframe:hover{
+    transform:scale(1.01);
+    box-shadow:0 15px 30px rgba(0,51,102,.2);
+}
+   /*========== RESPONSIVE ==========*/
+
+@media (max-width:992px){
+
+    section{padding:60px 6%;}
+
+    .contenido-banner h1{font-size:42px;}
+    .contenido-banner p{font-size:18px;}
+
+    .nosotros,
+    .historia,
+    .mision-vision,
+    .contenedor-contacto,
+    .footer-contenido{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .galeria,
+    .galeria-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contenedor-servicios,
+    .contenedor-servicios-detalle,
+    .contenedor-valores,
+    .contenedor-equipo{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    header,
+    nav ul{
+        flex-direction:column;
+    }
+
+    header{padding:20px;}
+    nav ul{
+        align-items:center;
+        gap:12px;
+    }
+
+    .logo{margin-bottom:15px;}
+
+    .banner{height:70vh;}
+    .banner-interno{height:40vh;}
+
+    .contenido-banner{
+        padding:30px 20px;
+    }
+
+    .contenido-banner h1{font-size:34px;}
+    .contenido-banner p{font-size:16px;}
+
+    h2{font-size:30px;}
+
+    .card,
+    .servicio,
+    .valor,
+    .miembro,
+    .formulario,
+    .video video,
+    .audio audio,
+    .mapa iframe{
+        width:100%;
+    }
+
+    .card,
+    .servicio,
+    .valor,
+    .miembro{
+        max-width:400px;
+    }
+
+    .galeria,
+    .galeria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mapa iframe{
+        height:300px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    section{padding:40px 5%;}
+
+    .logo img{width:140px;}
+
+    nav a{
+        padding:8px 12px;
+        font-size:15px;
+    }
+
+    .contenido-banner h1{font-size:28px;}
+    .contenido-banner p,
+    p{font-size:15px;}
+
+    h2{font-size:26px;}
+
+    .btn-banner{
+        padding:12px 25px;
+        font-size:15px;
+    }
+
+    .footer-contenido{
+        gap:20px;
+    }
+
+}
